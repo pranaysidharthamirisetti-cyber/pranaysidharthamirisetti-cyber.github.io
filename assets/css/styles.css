@@ -286,19 +286,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   box-shadow: 0 0 0 1px var(--line-strong), 0 10px 30px -12px var(--accent);
 }
 
+/* The brand is one continuous name, kept on a single line. */
 .brand-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.94rem;
-  line-height: 1.15;
-}
-.brand-text em {
-  font-style: normal;
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .nav-links {

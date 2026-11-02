@@ -1,4 +1,4 @@
-# Shree Pranay Sidhartha Amirisetti — Personal Website
+# Amirisetti Shree Pranay Sidhartha — Personal Website
 
 A standalone, zero-dependency personal portfolio site. Plain HTML, CSS and JavaScript, designed to be hosted on GitHub Pages with no build step.
 
@@ -77,13 +77,15 @@ Everything is also annotated for the form editor. If you prefer text edits, sear
 1. **Email** — currently `hello@example.com` in five places (hero icon, contact button text and href, `data-email` attribute, and the contact social link).
 2. **Social profiles** — GitHub (`pranaysidharthamirisetti-cyber`), LinkedIn and ResearchGate are already wired to the real profiles.
 3. **Research** — three published review papers, each linked to its ResearchGate page. Titles, dates and abstracts were taken from the public publication records, so verify the wording before publishing.
-4. **Education & involvement** — degree details (VNRVJIET, 2025–2029) and Kakşyā Śāstra membership.
+4. **Education & involvement** — degree details (VNRVJIET, 2025–2029) and the two clubs: **AIRBOTS**, the robotics club, and **Kakşyā Śāstra**, the space club.
 5. **Skills** — four grouped cards of chips: Python & data, machine learning, robotics & space, tools & research. Adjust to match what you can defend in an interview.
 6. **About** — the two paragraphs and the "fast facts" list.
 7. **Hero** — the rotating phrases (`role-word` elements) and the availability line.
 8. **Page metadata** — `<title>`, `<meta name="description">`, and the Open Graph / Twitter tags in `<head>`.
 
 Tip: to hide a section you don't need, delete the whole `<section>` block and remove its `<li>` from the nav.
+
+The monogram is "AS" in three places — the header brand mark, the about-card orbit frame and `assets/favicon.svg`. If you change the name order, update all three.
 
 ---
 
