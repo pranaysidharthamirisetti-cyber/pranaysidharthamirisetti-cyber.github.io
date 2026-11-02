@@ -77,7 +77,7 @@ Everything is also annotated for the form editor. If you prefer text edits, sear
 1. **Email** — set to `pranaysidharthamirisetti@gmail.com` in five places (hero icon, contact button text and href, `data-email` attribute, and the contact social link). The editor's "Contact email" field updates all five at once.
 2. **Social profiles** — GitHub (`pranaysidharthamirisetti-cyber`), LinkedIn and ResearchGate are already wired to the real profiles.
 3. **Research** — three published review papers, each linked to its ResearchGate page. Titles, dates and abstracts were taken from the public publication records, so verify the wording before publishing.
-4. **Education & involvement** — degree details (VNRVJIET, 2025–2029) and the two clubs: **AIRBOTS**, the robotics club, and **Kakşyā Śāstra**, the space club.
+4. **Education & involvement** — degree details (VNRVJIET, 2025–2029), the **Megara Robotics** internship (ROS 2, MoveIt, Gazebo), and the two clubs: **AIRBOTS**, the robotics club, and **Kakşyā Śāstra**, the space club. The internship period line currently reads "Internship" — put the real months there once you know them.
 5. **Skills** — four grouped cards of chips: Python & data, machine learning, robotics & space, tools & research. Adjust to match what you can defend in an interview.
 6. **About** — the two paragraphs and the "fast facts" list.
 7. **Hero** — the rotating phrases (`role-word` elements) and the availability line.
