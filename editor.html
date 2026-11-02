@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site editor · Shree Pranay Sidhartha Amirisetti</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#07080f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/editor.css" />
+</head>
+<body class="ed-shell">
+  <header class="ed-header">
+    <div class="ed-brand">
+      <span class="ed-brand-mark">SA</span>
+      <div class="ed-brand-text">
+        <strong>Site editor</strong>
+        <span>Fill the form · watch it update · save the file</span>
+      </div>
+    </div>
+
+    <div class="ed-header-actions">
+      <button class="ed-btn" id="edTheme" type="button" title="Toggle preview theme">Dark preview</button>
+      <button class="ed-btn" id="edReset" type="button">Reset</button>
+      <button class="ed-btn" id="edCopy" type="button">Copy HTML</button>
+      <button class="ed-btn ed-btn-primary" id="edDownload" type="button">Download index.html</button>
+    </div>
+  </header>
+
+  <main class="ed-main">
+    <aside class="ed-panel" aria-label="Editor">
+      <div class="ed-tabs" role="tablist">
+        <button class="ed-tab is-active" id="tabForm" data-pane="paneForm" role="tab" aria-selected="true">Form</button>
+        <button class="ed-tab" id="tabHtml" data-pane="paneHtml" role="tab" aria-selected="false">HTML</button>
+        <button class="ed-tab" id="tabPublish" data-pane="panePublish" role="tab" aria-selected="false">Publish</button>
+      </div>
+
+      <!-- ---------------- FORM ---------------- -->
+      <div class="ed-pane" id="paneForm">
+        <div class="ed-draft" id="edDraft" hidden>
+          <p>You have unsaved edits from an earlier session.</p>
+          <div class="ed-draft-actions">
+            <button class="ed-btn ed-btn-small ed-btn-primary" id="edRestore" type="button">Restore draft</button>
+            <button class="ed-btn ed-btn-small" id="edDiscard" type="button">Discard</button>
+          </div>
+        </div>
+
+        <form class="ed-form" id="edForm" autocomplete="off"></form>
+
+        <div class="ed-panel-foot">
+          <label class="ed-file">
+            Import an index.html
+            <input type="file" id="edImport" accept=".html,text/html" />
+          </label>
+          <p class="ed-hint">
+            Nothing is uploaded anywhere until you press Publish. Edits stay in this browser as a draft.
+          </p>
+        </div>
+      </div>
+
+      <!-- ---------------- HTML ---------------- -->
+      <div class="ed-pane" id="paneHtml" hidden>
+        <p class="ed-hint">
+          Advanced: the full page source. Edit carefully, then Apply. Anything you break here is
+          recoverable with Reset.
+        </p>
+        <textarea class="ed-code" id="edHtml" spellcheck="false" wrap="off"></textarea>
+        <button class="ed-btn ed-btn-primary" id="edApplyHtml" type="button">Apply HTML</button>
+      </div>
+
+      <!-- ---------------- PUBLISH ---------------- -->
+      <div class="ed-pane" id="panePublish" hidden>
+        <p class="ed-hint">
+          Publishes this page straight to your GitHub repository through the GitHub API, which then
+          redeploys your GitHub Pages site. Create a <strong>fine-grained personal access token</strong>
+          with <em>Contents: Read and write</em> on this one repository.
+        </p>
+
+        <label class="ed-field">
+          <span class="ed-label">Access token</span>
+          <input type="password" id="pubToken" placeholder="github_pat_..." />
+        </label>
+        <label class="ed-check">
+          <input type="checkbox" id="pubRemember" />
+          <span>Remember the token on this device (stored in localStorage — only do this on your own machine)</span>
+        </label>
+
+        <div class="ed-row">
+          <label class="ed-field">
+            <span class="ed-label">Owner</span>
+            <input type="text" id="pubOwner" value="pranaysidharthamirisetti-cyber" placeholder="pranaysidharthamirisetti-cyber" />
+          </label>
+          <label class="ed-field">
+            <span class="ed-label">Repository</span>
+            <input type="text" id="pubRepo" value="Sidharth_Amirisetti.github.io" placeholder="Sidharth_Amirisetti.github.io" />
+          </label>
+        </div>
+
+        <div class="ed-row">
+          <label class="ed-field">
+            <span class="ed-label">Branch</span>
+            <input type="text" id="pubBranch" value="main" placeholder="main" />
+          </label>
+          <label class="ed-field">
+            <span class="ed-label">Commit message</span>
+            <input type="text" id="pubMessage" placeholder="Update site content" />
+          </label>
+        </div>
+
+        <button class="ed-btn ed-btn-primary" id="pubButton" type="button">Publish to GitHub</button>
+        <p class="ed-status" id="pubStatus"></p>
+      </div>
+    </aside>
+
+    <section class="ed-preview" aria-label="Live preview">
+      <div class="ed-preview-bar">
+        <div class="ed-viewport" role="group" aria-label="Preview width">
+          <button class="ed-vp is-active" data-view="desktop" type="button">Desktop</button>
+          <button class="ed-vp" data-view="tablet" type="button">Tablet</button>
+          <button class="ed-vp" data-view="mobile" type="button">Mobile</button>
+        </div>
+        <p class="ed-status" id="edStatus">Loading index.html…</p>
+      </div>
+
+      <div class="ed-frame-wrap" data-view="desktop">
+        <iframe id="edPreview" title="Live preview of your site"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/editor.js" defer></script>
+</body>
+</html>

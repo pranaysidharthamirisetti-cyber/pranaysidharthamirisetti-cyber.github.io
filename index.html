@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Shree Pranay Sidhartha Amirisetti | Robotics &amp; AI</title>
+  <meta name="description" content="Shree Pranay Sidhartha Amirisetti — B.Tech Robotics & Artificial Intelligence student at VNRVJIET, Hyderabad. Research on satellite communication, stealth technology and quantum links." />
+  <meta name="author" content="Shree Pranay Sidhartha Amirisetti" />
+  <meta name="theme-color" content="#05060f" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shree Pranay Sidhartha Amirisetti | Robotics & AI" />
+  <meta property="og:description" content="Robotics & AI undergraduate at VNRVJIET, Hyderabad. Space-systems research and a member of Kakşyā Śāstra." />
+  <meta property="og:url" content="./" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shree Pranay Sidhartha Amirisetti | Robotics & AI" />
+  <meta name="twitter:description" content="Robotics & AI undergraduate at VNRVJIET, Hyderabad. Space-systems research and a member of Kakşyā Śāstra." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script>
+    // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
+      } catch (e) { /* localStorage unavailable - keep default */ }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shree Pranay Sidhartha Amirisetti",
+      "jobTitle": "Robotics & Artificial Intelligence Undergraduate",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "VNR Vignana Jyothi Institute of Engineering and Technology"
+      },
+      "url": "./",
+      "sameAs": [
+        "https://www.linkedin.com/in/shreepranaysidharthaamirisetti292007",
+        "https://github.com/pranaysidharthamirisetti-cyber",
+        "https://www.researchgate.net/profile/Amirisetti-Sidhartha"
+      ],
+      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Robotics", "Astronomy", "Space Systems", "Physics", "Mathematics"]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Live space background -->
+  <canvas id="space" class="space-canvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Shree Pranay Sidhartha Amirisetti - home">
+        <span class="brand-mark">SA</span>
+        <span class="brand-text">Shree Pranay<em>Sidhartha Amirisetti</em></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span data-edit="Hero — small line above your name">B.Tech Robotics &amp; AI · VNRVJIET, Hyderabad</span>
+        </p>
+
+        <h1 class="hero-title reveal">
+          Hi, I'm <span class="gradient-text" data-edit="Hero — your name (new line = line break)" data-edit-breaks="1">Shree Pranay
+Sidhartha Amirisetti</span>
+        </h1>
+
+        <p class="hero-role reveal">
+          <span class="role-prefix">Focused on</span>
+          <span class="role-swap" aria-live="polite">
+            <span class="role-word is-active" data-edit="Hero — rotating phrase 1">robotics &amp; autonomous systems</span>
+            <span class="role-word" data-edit="Hero — rotating phrase 2">AI &amp; machine learning</span>
+            <span class="role-word" data-edit="Hero — rotating phrase 3">space systems &amp; satellite links</span>
+            <span class="role-word" data-edit="Hero — rotating phrase 4">physics-informed engineering</span>
+          </span>
+        </p>
+
+        <p class="hero-copy reveal" data-edit="Hero — intro paragraph">
+          First-year Robotics &amp; Artificial Intelligence undergraduate at VNR Vignana Jyothi
+          Institute of Engineering and Technology. My interests span AI, machine learning, robotics,
+          physics, mathematics, astronomy and space entrepreneurship — and I write review papers on
+          the technologies that keep satellites talking.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#research">
+            <span data-edit="Hero — main button label">Read my research</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            <span data-edit="Hero — second button label">Get in touch</span>
+          </a>
+        </div>
+
+        <ul class="social-row reveal" aria-label="Social links">
+          <li>
+            <a href="https://github.com/pranaysidharthamirisetti-cyber" data-edit-url="GitHub profile" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/shreepranaysidharthaamirisetti292007" data-edit-url="LinkedIn profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.3 8.65 22 10.6 22 13.6V21h-4v-6.6c0-1.6-.6-2.7-2-2.7-1.15 0-1.85.78-2.15 1.53-.1.27-.13.65-.13 1.03V21h-4V9Z" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.researchgate.net/profile/Amirisetti-Sidhartha" data-edit-url="ResearchGate profile" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6a1.5 1.5 0 0 1-1.5-1.5v-15A1.5 1.5 0 0 1 6 3Zm8.5.9V8h4.1M8.5 12h7M8.5 15.5h7" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@example.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.3-.5 6.7 5 6.7-5H5.3Z" /></svg>
+            </a>
+          </li>
+        </ul>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+          <span class="mouse"><span class="wheel"></span></span>
+          <span class="scroll-cue-text">Scroll</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker" data-edit="About — small heading">01 — About</p>
+          <h2 class="section-title" data-edit="About — heading">A student chasing the physics behind the software</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-card reveal" aria-hidden="true">
+            <div class="orbit-frame">
+              <span class="orbit-ring ring-1"></span>
+              <span class="orbit-ring ring-2"></span>
+              <span class="orbit-dot dot-1"></span>
+              <span class="orbit-dot dot-2"></span>
+              <span class="monogram">SA</span>
+            </div>
+            <p class="about-card-caption" data-edit="About — caption under the monogram">Robotics &amp; AI · 2025–2029</p>
+          </div>
+
+          <div class="about-body reveal">
+            <p data-edit="About — paragraph 1">
+              I'm an undergraduate in Robotics and Artificial Intelligence at VNR Vignana Jyothi
+              Institute of Engineering and Technology, Hyderabad. I like problems that sit where
+              computation meets the physical world — a control loop, a sensor budget, a link margin,
+              or the amount of signal a satellite can afford to lose.
+            </p>
+            <p data-edit="About — paragraph 2">
+              Alongside coursework I write review papers on space and defence technologies, from
+              satellite jamming and anti-jamming to stealth engineering and quantum communication.
+              Writing them has taught me more about reading primary sources than any syllabus could.
+              I'm also a member of Kakşyā Śāstra, the space club of VNRVJIET, where students build
+              rovers, nano-satellite payloads and talk about orbits far too late at night.
+            </p>
+
+            <ul class="fact-list">
+              <li>
+                <span class="fact-label">Based in</span>
+                <span class="fact-value" data-edit="About — fact 1 value">Hyderabad, Telangana, India</span>
+              </li>
+              <li>
+                <span class="fact-label">Studying</span>
+                <span class="fact-value" data-edit="About — fact 2 value">B.Tech, Robotics &amp; Artificial Intelligence (2025–2029)</span>
+              </li>
+              <li>
+                <span class="fact-label">College</span>
+                <span class="fact-value" data-edit="About — fact 3 value">VNR Vignana Jyothi Institute of Engineering &amp; Technology</span>
+              </li>
+              <li>
+                <span class="fact-label">Club</span>
+                <span class="fact-value" data-edit="About — fact 4 value">Kakşyā Śāstra — The Space Club of VNRVJIET</span>
+              </li>
+              <li>
+                <span class="fact-label">Writing</span>
+                <span class="fact-value" data-edit="About — fact 5 value">3 review papers on ResearchGate (2026)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker" data-edit="Skills — small heading">02 — Skills</p>
+          <h2 class="section-title" data-edit="Skills — heading">What I work with</h2>
+          <p class="section-sub" data-edit="Skills — subheading">A first-year toolkit in progress — Python for computation and analysis, plus the subject areas I'm building depth in.</p>
+        </header>
+
+        <div class="card-grid skills-grid">
+          <article class="card skill-card reveal">
+            <h3 class="card-title" data-edit="Skills — group 1 title">Python &amp; data</h3>
+            <ul class="chip-list" data-edit-items="Skills — group 1 items">
+              <li class="chip">Python</li>
+              <li class="chip">NumPy</li>
+              <li class="chip">pandas</li>
+              <li class="chip">Matplotlib</li>
+              <li class="chip">Jupyter</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card-title" data-edit="Skills — group 2 title">Machine learning</h3>
+            <ul class="chip-list" data-edit-items="Skills — group 2 items">
+              <li class="chip">scikit-learn</li>
+              <li class="chip">Model evaluation</li>
+              <li class="chip">Data cleaning</li>
+              <li class="chip">Statistics</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card-title" data-edit="Skills — group 3 title">Robotics &amp; space</h3>
+            <ul class="chip-list" data-edit-items="Skills — group 3 items">
+              <li class="chip">Robotics</li>
+              <li class="chip">Control basics</li>
+              <li class="chip">Satellite communication</li>
+              <li class="chip">Astronomy</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card-title" data-edit="Skills — group 4 title">Tools &amp; research</h3>
+            <ul class="chip-list" data-edit-items="Skills — group 4 items">
+              <li class="chip">Git &amp; GitHub</li>
+              <li class="chip">Linux</li>
+              <li class="chip">Technical writing</li>
+              <li class="chip">Literature review</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section class="section" id="research">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker" data-edit="Research — small heading">03 — Research</p>
+          <h2 class="section-title" data-edit="Research — heading">Review papers on space &amp; defence technology</h2>
+          <p class="section-sub" data-edit="Research — subheading">
+            Three review articles published on ResearchGate in 2026, each surveying a fast-moving area
+            and pulling the physics, engineering constraints and open problems into one place.
+          </p>
+        </header>
+
+        <div class="card-grid project-grid">
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6a1.5 1.5 0 0 1-1.5-1.5v-15A1.5 1.5 0 0 1 6 3Zm8.5.9V8h4.1M8.5 12h7M8.5 15.5h7" /></svg>
+              </span>
+              <div class="project-links">
+                <a href="https://www.researchgate.net/publication/403780697_Satellite-Based_Quantum_Communication_for_Secure_Space_Links_Technologies_Challenges_and_Future_Directions" data-edit-url="Paper 1 — link" target="_blank" rel="noopener noreferrer" aria-label="Read on ResearchGate">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></svg>
+                </a>
+              </div>
+            </div>
+            <p class="paper-date" data-edit="Paper 1 — date">April 2026</p>
+            <h3 class="card-title" data-edit="Paper 1 — title">Satellite-based quantum communication for secure space links</h3>
+            <p class="card-copy" data-edit="Paper 1 — short description">
+              How quantum key distribution works from orbit: the technologies in play, the loss and
+              decoherence challenges that make free-space links hard, and where the field is heading.
+            </p>
+            <ul class="chip-list chip-list-sm" data-edit-items="Paper 1 — topics">
+              <li class="chip">Quantum</li>
+              <li class="chip">Space links</li>
+              <li class="chip">Cryptography</li>
+            </ul>
+            <a class="paper-link" href="https://www.researchgate.net/publication/403780697_Satellite-Based_Quantum_Communication_for_Secure_Space_Links_Technologies_Challenges_and_Future_Directions" data-edit-url="Paper 1 — link" target="_blank" rel="noopener noreferrer">
+              <span data-edit="Paper 1 — link label">Read on ResearchGate</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+            </a>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 4 6.5v11L12 21l8-3.5v-11L12 3Zm0 0v18M4 6.5 12 10l8-3.5" /></svg>
+              </span>
+              <div class="project-links">
+                <a href="https://www.researchgate.net/publication/404997579_A_State-of-the-Art_Review_of_Stealth_Technology_Physics_Engineering_and_Strategic_Outlook" data-edit-url="Paper 2 — link" target="_blank" rel="noopener noreferrer" aria-label="Read on ResearchGate">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></svg>
+                </a>
+              </div>
+            </div>
+            <p class="paper-date" data-edit="Paper 2 — date">May 2026</p>
+            <h3 class="card-title" data-edit="Paper 2 — title">Stealth technology: physics, engineering and strategic outlook</h3>
+            <p class="card-copy" data-edit="Paper 2 — short description">
+              A multidisciplinary survey of radar cross-section reduction — shaping, radar-absorbing
+              materials, plasma and active cancellation — set against the counter-detection methods
+              that chase them.
+            </p>
+            <ul class="chip-list chip-list-sm" data-edit-items="Paper 2 — topics">
+              <li class="chip">Electromagnetics</li>
+              <li class="chip">Materials</li>
+              <li class="chip">Defence tech</li>
+            </ul>
+            <a class="paper-link" href="https://www.researchgate.net/publication/404997579_A_State-of-the-Art_Review_of_Stealth_Technology_Physics_Engineering_and_Strategic_Outlook" data-edit-url="Paper 2 — link" target="_blank" rel="noopener noreferrer">
+              <span data-edit="Paper 2 — link label">Read on ResearchGate</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+            </a>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 1 5 5c0 4-2.2 5.5-2.2 8.5H9.2C9.2 13.5 7 12 7 8a5 5 0 0 1 5-5Zm-2.8 13.5h5.6M10.5 20h3" /></svg>
+              </span>
+              <div class="project-links">
+                <a href="https://www.researchgate.net/publication/406301008_Review_of_Satellite_Jamming_Threats_and_Anti-Jamming_Solutions_for_Modern_Navigation_and_Communication_Systems" data-edit-url="Paper 3 — link" target="_blank" rel="noopener noreferrer" aria-label="Read on ResearchGate">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></svg>
+                </a>
+              </div>
+            </div>
+            <p class="paper-date" data-edit="Paper 3 — date">June 2026</p>
+            <h3 class="card-title" data-edit="Paper 3 — title">Satellite jamming threats and anti-jamming solutions</h3>
+            <p class="card-copy" data-edit="Paper 3 — short description">
+              A threat review for modern navigation and communication systems: jamming and spoofing
+              classes, why GNSS signals are so fragile, and the countermeasures — adaptive antennas,
+              beamforming and frequency agility — used to defend them.
+            </p>
+            <ul class="chip-list chip-list-sm" data-edit-items="Paper 3 — topics">
+              <li class="chip">GNSS</li>
+              <li class="chip">RF &amp; signal</li>
+              <li class="chip">Resilience</li>
+            </ul>
+            <a class="paper-link" href="https://www.researchgate.net/publication/406301008_Review_of_Satellite_Jamming_Threats_and_Anti-Jamming_Solutions_for_Modern_Navigation_and_Communication_Systems" data-edit-url="Paper 3 — link" target="_blank" rel="noopener noreferrer">
+              <span data-edit="Paper 3 — link label">Read on ResearchGate</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+            </a>
+          </article>
+        </div>
+
+        <p class="section-note reveal">
+          Full list on
+          <a href="https://www.researchgate.net/profile/Amirisetti-Sidhartha" data-edit-url="ResearchGate profile" target="_blank" rel="noopener noreferrer">ResearchGate</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker" data-edit="Education — small heading">04 — Education &amp; involvement</p>
+          <h2 class="section-title" data-edit="Education — heading">Where I'm learning</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-period" data-edit="Education 1 — period">2025 — 2029</p>
+              <h3 class="timeline-role" data-edit="Education 1 — title">B.Tech, Robotics &amp; Artificial Intelligence</h3>
+              <p class="timeline-org" data-edit="Education 1 — organisation">VNR Vignana Jyothi Institute of Engineering and Technology · Hyderabad</p>
+              <ul class="timeline-points" data-edit-items="Education 1 — bullet points">
+                <li>Coursework across programming, mathematics, physics and the fundamentals of robotics and AI.</li>
+                <li>Independent research writing on satellite communication and space technology.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-period" data-edit="Education 2 — period">2026 — Present</p>
+              <h3 class="timeline-role" data-edit="Education 2 — title">Member — Kakşyā Śāstra</h3>
+              <p class="timeline-org" data-edit="Education 2 — organisation">The Space Club of VNRVJIET</p>
+              <ul class="timeline-points" data-edit-items="Education 2 — bullet points">
+                <li>Part of a student community working on space science, astrophysics and hands-on builds.</li>
+                <li>Club projects and events span rover and nano-satellite work, talks and space-themed fests.</li>
+                <li>Talks and writing on satellites, orbital systems and space entrepreneurship.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="timeline-period" data-edit="Education 3 — period">2026</p>
+              <h3 class="timeline-role" data-edit="Education 3 — title">Independent research — three published reviews</h3>
+              <p class="timeline-org" data-edit="Education 3 — organisation">ResearchGate</p>
+              <ul class="timeline-points" data-edit-items="Education 3 — bullet points">
+                <li>Satellite-based quantum communication for secure space links.</li>
+                <li>Stealth technology: physics, engineering and strategic outlook.</li>
+                <li>Satellite jamming threats and anti-jamming solutions for navigation and communication.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <p class="section-kicker" data-edit="Contact — small heading">05 — Contact</p>
+          <h2 class="section-title" data-edit="Contact — heading">Let's talk robotics, satellites or physics</h2>
+          <p class="contact-copy" data-edit="Contact — paragraph">
+            I'm open to internships, student research collaborations and any conversation that
+            involves autonomous systems, space technology or a genuinely hard problem.
+          </p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:hello@example.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.3-.5 6.7 5 6.7-5H5.3Z" /></svg>
+              <span data-email-text>hello@example.com</span>
+            </a>
+            <button class="btn btn-ghost" id="copyEmail" data-email="hello@example.com" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9V6.5A2.5 2.5 0 0 1 11.5 4h7A2.5 2.5 0 0 1 21 6.5v7a2.5 2.5 0 0 1-2.5 2.5H16M4.5 9h7A2.5 2.5 0 0 1 14 11.5v7A2.5 2.5 0 0 1 11.5 21h-7A2.5 2.5 0 0 1 2 18.5v-7A2.5 2.5 0 0 1 4.5 9Z" /></svg>
+              <span class="copy-label">Copy email</span>
+            </button>
+          </div>
+
+          <ul class="social-row contact-socials" aria-label="Social links">
+            <li><a href="https://www.linkedin.com/in/shreepranaysidharthaamirisetti292007" data-edit-url="LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.researchgate.net/profile/Amirisetti-Sidhartha" data-edit-url="ResearchGate profile" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+            <li><a href="https://github.com/pranaysidharthamirisetti-cyber" data-edit-url="GitHub profile" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="mailto:hello@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> <span data-edit="Footer — your name">Shree Pranay Sidhartha Amirisetti</span>. All rights reserved.</p>
+      <p class="footer-meta">Built with vanilla HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</p>
+      <a class="back-to-top" href="#top">
+        Back to top
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6" /></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/space.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
