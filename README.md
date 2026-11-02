@@ -74,7 +74,7 @@ How the annotations work, if you ever need to add a field:
 
 Everything is also annotated for the form editor. If you prefer text edits, search for `TODO` comments in `index.html`, or just use `/editor.html`. Either way, update:
 
-1. **Email** — currently `hello@example.com` in five places (hero icon, contact button text and href, `data-email` attribute, and the contact social link).
+1. **Email** — set to `pranaysidharthamirisetti@gmail.com` in five places (hero icon, contact button text and href, `data-email` attribute, and the contact social link). The editor's "Contact email" field updates all five at once.
 2. **Social profiles** — GitHub (`pranaysidharthamirisetti-cyber`), LinkedIn and ResearchGate are already wired to the real profiles.
 3. **Research** — three published review papers, each linked to its ResearchGate page. Titles, dates and abstracts were taken from the public publication records, so verify the wording before publishing.
 4. **Education & involvement** — degree details (VNRVJIET, 2025–2029) and the two clubs: **AIRBOTS**, the robotics club, and **Kakşyā Śāstra**, the space club.
