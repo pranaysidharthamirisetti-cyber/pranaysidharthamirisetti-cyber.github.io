@@ -88,10 +88,10 @@
     // Keep the home link correct whether the site is served from a domain root
     // or from a GitHub Pages project subpath (e.g. /my-repo/).
     (function () {
-      // The site may be served from a domain root or from a project subpath.
-      // Update KNOWN_PROJECT_PATH if you rename the repository.
-      var KNOWN_PROJECT_PATH = "/Sidharth_Amirisetti.github.io/";
-      var base = window.location.pathname.indexOf(KNOWN_PROJECT_PATH) === 0 ? KNOWN_PROJECT_PATH : "/";
+      // This repository is named after the account, so Pages serves it at the
+      // domain root. Set PROJECT_PATH if it ever moves to a project subpath.
+      var PROJECT_PATH = "";
+      var base = PROJECT_PATH ? "/" + PROJECT_PATH + "/" : "/";
 
       var link = document.getElementById("homeLink");
       if (link) link.setAttribute("href", base);

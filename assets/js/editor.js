@@ -476,8 +476,10 @@
   function loadSettings() {
     try {
       var saved = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
+      // The repository was renamed, so a saved copy of the old name is stale.
+      var legacyRepo = "Sidharth_Amirisetti.github.io";
       if (saved.owner) els.pub.owner.value = saved.owner;
-      if (saved.repo) els.pub.repo.value = saved.repo;
+      if (saved.repo && saved.repo !== legacyRepo) els.pub.repo.value = saved.repo;
       if (saved.branch) els.pub.branch.value = saved.branch;
       if (saved.message) els.pub.message.value = saved.message;
 

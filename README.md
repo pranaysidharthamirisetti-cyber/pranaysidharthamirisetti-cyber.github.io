@@ -45,7 +45,7 @@ Opening `index.html` directly from disk also works, but a local server is closer
 
 ## Edit the page with a form (no code)
 
-Open **`/editor.html`** on your live site (for example `https://pranaysidharthamirisetti-cyber.github.io/Sidharth_Amirisetti.github.io/editor.html`) or at <http://localhost:8080/editor.html> while previewing locally.
+Open **`/editor.html`** on your live site (for example `https://pranaysidharthamirisetti-cyber.github.io/editor.html`) or at <http://localhost:8080/editor.html> while previewing locally.
 
 1. The editor loads the current `index.html` and builds a labelled form from every `data-edit` annotation, grouped by section.
 2. Type in a field and the preview on the right updates live. Use Desktop / Tablet / Mobile to check layouts, and the theme button to inspect light mode.
@@ -105,32 +105,28 @@ Then enable Pages once (either route):
 - **CLI** (GitHub CLI installed and authenticated):
 
 ```powershell
-gh api -X POST repos/pranaysidharthamirisetti-cyber/Sidharth_Amirisetti.github.io/pages `
+gh api -X POST repos/pranaysidharthamirisetti-cyber/pranaysidharthamirisetti-cyber.github.io/pages `
   -f "source[branch]=main" -f "source[path]=/"
 ```
 
 The site goes live in a minute or two.
 
-### Important: which URL you get
+### Which URL you get
 
-GitHub only serves the clean root URL when the repository name **exactly** matches your username:
+GitHub only serves the clean root URL when the repository name **exactly** matches the account name:
 
 | Repository name | URL |
 | --- | --- |
-| `pranaysidharthamirisetti-cyber.github.io` | `https://pranaysidharthamirisetti-cyber.github.io/` |
-| `Sidharth_Amirisetti.github.io` (current) | `https://pranaysidharthamirisetti-cyber.github.io/Sidharth_Amirisetti.github.io/` |
+| `pranaysidharthamirisetti-cyber.github.io` (current) | `https://pranaysidharthamirisetti-cyber.github.io/` |
+| any other name | `https://pranaysidharthamirisetti-cyber.github.io/<repo-name>/` |
 
-The current repo name is a *project* site because it doesn't match the account name. Two options:
+This repo has been renamed to match the account, so the site is served from the **domain root** and the old `…/Sidharth_Amirisetti.github.io/` subpath no longer resolves. Only one repo per account can use that name, and it must be public on a free plan.
 
-- **Keep it** — nothing to change; the site already works under the subpath.
-- **Get the root URL** — rename the repo (Settings → General → Repository name) to `pranaysidharthamirisetti-cyber.github.io`, then update your remote:
+The local clone folder is still called `Sidharth_Amirisetti.github.io`, which is harmless — rename it if you want the disk to match:
 
-  ```powershell
-  git remote set-url origin https://github.com/pranaysidharthamirisetti-cyber/pranaysidharthamirisetti-cyber.github.io.git
-  git push -u origin main
-  ```
-
-  Only one repo per account can use that name, and it must be public on a free plan.
+```powershell
+Rename-Item "Sidharth_Amirisetti.github.io" "pranaysidharthamirisetti-cyber.github.io"
+```
 
 ### Custom domain (optional)
 
