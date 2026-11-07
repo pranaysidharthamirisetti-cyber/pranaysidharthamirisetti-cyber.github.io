@@ -85,7 +85,7 @@ Everything is also annotated for the form editor. If you prefer text edits, sear
 
 Tip: to hide a section you don't need, delete the whole `<section>` block and remove its `<li>` from the nav.
 
-The monogram is "AS" in three places — the header brand mark, the about-card orbit frame and `assets/favicon.svg`. If you change the name order, update all three.
+Your photo (`assets/myphoto.jpeg`) appears in two places — the header brand avatar and the about-card orbit frame (`.portrait`). Swap the file to change it everywhere; keep it roughly square for clean circular crops. The favicon (`assets/favicon.svg`) is still the "AS" monogram.
 
 ---
 

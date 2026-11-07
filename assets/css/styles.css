@@ -278,12 +278,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   width: 38px;
   height: 38px;
   border-radius: 12px;
+  overflow: hidden;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--accent-contrast);
   background: linear-gradient(135deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
   box-shadow: 0 0 0 1px var(--line-strong), 0 10px 30px -12px var(--accent);
+}
+
+.brand-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
 }
 
 /* The brand is one continuous name, kept on a single line. */
@@ -708,21 +716,22 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   to { transform: rotate(360deg) translateX(55px) rotate(-360deg); }
 }
 
-.monogram {
+.portrait {
   position: relative;
   z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 108px;
-  height: 108px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--accent-contrast);
-  background: linear-gradient(140deg, var(--accent-2), var(--accent) 55%, var(--accent-3));
+  object-fit: cover;
+  object-position: 50% 30%;
+  border: 2px solid var(--accent-2);
   box-shadow: 0 0 40px -10px var(--accent);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.portrait:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 55px -8px var(--accent);
 }
 
 .about-card-caption {
